@@ -33,6 +33,7 @@ module "network" {
   s3_endpoint_enabled         = true
 }
 ```
+
 ## Requirements
 
 | Name | Version |
@@ -41,11 +42,13 @@ module "network" {
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 3.71 |
 | <a name="requirement_null"></a> [null](#requirement\_null) | >= 2.0 |
 | <a name="requirement_template"></a> [template](#requirement\_template) | >= 2.0 |
+
 ## Providers
 
 | Name | Version |
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | >= 3.71 |
+
 ## Modules
 
 | Name | Source | Version |
@@ -54,12 +57,14 @@ module "network" {
 | <a name="module_this"></a> [this](#module\_this) | cloudposse/label/null | 0.25.0 |
 | <a name="module_vpc"></a> [vpc](#module\_vpc) | cloudposse/vpc/aws | 2.0.0 |
 | <a name="module_vpce_s3_label"></a> [vpce\_s3\_label](#module\_vpce\_s3\_label) | cloudposse/label/null | 0.25.0 |
+
 ## Resources
 
 | Name | Type |
 |------|------|
 | [aws_vpc_endpoint.s3](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc_endpoint) | resource |
 | [aws_region.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/region) | data source |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -87,6 +92,7 @@ module "network" {
 | <a name="input_tags"></a> [tags](#input\_tags) | Additional tags (e.g. `{'BusinessUnit': 'XYZ'}`).<br>Neither the tag keys nor the tag values will be modified by this module. | `map(string)` | `{}` | no |
 | <a name="input_tenant"></a> [tenant](#input\_tenant) | ID element \_(Rarely used, not included by default)\_. A customer identifier, indicating who this instance of a resource is for | `string` | `null` | no |
 | <a name="input_vpc_cidr_block"></a> [vpc\_cidr\_block](#input\_vpc\_cidr\_block) | CIDR Block for the VPC. | `string` | `"10.0.0.0/16"` | no |
+
 ## Outputs
 
 | Name | Description |
@@ -95,6 +101,7 @@ module "network" {
 | <a name="output_public_subnet_ids"></a> [public\_subnet\_ids](#output\_public\_subnet\_ids) | IDs of the created public subnets. |
 | <a name="output_s3_endpoint_arn"></a> [s3\_endpoint\_arn](#output\_s3\_endpoint\_arn) | ARN of the S3 endpoint. |
 | <a name="output_vpc_id"></a> [vpc\_id](#output\_vpc\_id) | The ID of the VPC. |
+
 ## Breaking Changes
 
 Please consult [BREAKING\_CHANGES.md](BREAKING\_CHANGES.md) for more information about version
