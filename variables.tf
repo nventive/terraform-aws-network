@@ -22,8 +22,15 @@ variable "subnets_nat_gateway_enabled" {
   description = "Set to `true` to create a nat gateway in each subnet."
 }
 
+variable "subnets_max_nats" {
+  type        = number
+  default     = 999
+  description = "Upper limit on number of NAT Gateways/Instances to create. Set to 1 or 2 for cost savings at the expense of availability."
+}
+
 variable "s3_endpoint_enabled" {
   type        = bool
   default     = false
   description = "Set to `true` to create a VPC gateway endpoint for S3."
 }
+
