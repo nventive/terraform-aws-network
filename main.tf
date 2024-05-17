@@ -22,6 +22,7 @@ module "subnets" {
   ipv4_cidr_block     = var.subnets_ipv4_cidr_block
   availability_zones  = var.subnets_availability_zones
   nat_gateway_enabled = var.subnets_nat_gateway_enabled
+  max_nats            = var.subnets_max_nats
 
   context = module.this.context
 }

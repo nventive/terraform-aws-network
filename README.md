@@ -88,6 +88,7 @@ module "network" {
 | <a name="input_stage"></a> [stage](#input\_stage) | ID element. Usually used to indicate role, e.g. 'prod', 'staging', 'source', 'build', 'test', 'deploy', 'release' | `string` | `null` | no |
 | <a name="input_subnets_availability_zones"></a> [subnets\_availability\_zones](#input\_subnets\_availability\_zones) | Availability zones for the subnets. | `list(string)` | <pre>[<br>  "us-east-1a",<br>  "us-east-1b"<br>]</pre> | no |
 | <a name="input_subnets_ipv4_cidr_block"></a> [subnets\_ipv4\_cidr\_block](#input\_subnets\_ipv4\_cidr\_block) | IPv4 CIDR Block for the subnets. | `list(string)` | <pre>[<br>  "10.0.0.0/16"<br>]</pre> | no |
+| <a name="input_subnets_max_nats"></a> [subnets\_max\_nats](#input\_subnets\_max\_nats) | Upper limit on number of NAT Gateways/Instances to create. Set to 1 or 2 for cost savings at the expense of availability. | `number` | `999` | no |
 | <a name="input_subnets_nat_gateway_enabled"></a> [subnets\_nat\_gateway\_enabled](#input\_subnets\_nat\_gateway\_enabled) | Set to `true` to create a nat gateway in each subnet. | `bool` | `false` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Additional tags (e.g. `{'BusinessUnit': 'XYZ'}`).<br>Neither the tag keys nor the tag values will be modified by this module. | `map(string)` | `{}` | no |
 | <a name="input_tenant"></a> [tenant](#input\_tenant) | ID element \_(Rarely used, not included by default)\_. A customer identifier, indicating who this instance of a resource is for | `string` | `null` | no |
